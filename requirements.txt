@@ -1,0 +1,16 @@
+# Versions used for the reported runs (Google Colab, Python 3.13), from run_metadata_*.json
+# Measurement harness
+google-cloud-dialogflow==2.54.0
+google-api-core==2.30.3
+grpcio==1.85.0
+protobuf==6.33.6
+requests==2.32.4
+flask==3.1.3
+waitress==3.0.2
+pyngrok==9.1.2
+# Analysis
+numpy==2.4.6
+scipy==1.16.3
+pandas==2.2.3
+statsmodels==0.15.0
+matplotlib>=3.8

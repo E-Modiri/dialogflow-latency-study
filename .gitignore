@@ -1,0 +1,20 @@
+# Never commit credentials
+*-sa.json
+*service-account*.json
+*credentials*.json
+.env
+*.env
+**/sa_*.json
+# Google Cloud service-account keys are usually named <project>-<keyid>.json
+newagent-*.json
+pizzabot-*.json
+currency-rhva-*.json
+jokeapi-*.json
+
+# Local outputs
+bench_out/
+results_local/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
