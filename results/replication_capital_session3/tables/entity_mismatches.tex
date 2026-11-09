@@ -1,0 +1,13 @@
+\begin{tabular}{lllllllrl}
+\toprule
+experiment & domain & arch & query_label & expected_entity & extracted_entity & matched_intent & first_success & first_error \\
+\midrule
+sustained & capital & A & Czech Republic & czech republic & czechia & GetCapital & False & api \\
+burst & capital & A & Czech Republic & czech republic & czechia & GetCapital & False & api \\
+sequential & capital & A & Czech Republic & czech republic & czechia & GetCapital & False & api \\
+sustained & capital & A & UAE & uae & united arab emirates & GetCapital & True &  \\
+sequential & capital & A & UAE & uae & united arab emirates & GetCapital & True &  \\
+burst & capital & A & UAE & uae & united arab emirates & GetCapital & True &  \\
+sequential & capital & A & UAE & uae & united arab emirates & GetCapital & False & api \\
+\bottomrule
+\end{tabular}

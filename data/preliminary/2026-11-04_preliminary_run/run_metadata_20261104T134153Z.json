@@ -1,0 +1,100 @@
+{
+  "run_id": "20261104T134153Z",
+  "started_utc": "2026-11-04T13:41:53.507+00:00",
+  "written_utc": "2026-11-04T19:05:59.285+00:00",
+  "python": "3.13.18 (main, Oct 26 2026, 15:28:15) [GCC 13.3.0]",
+  "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+  "cpu_count": 2,
+  "memory": "MemTotal:       13286924 kB",
+  "in_colab": true,
+  "packages": {
+    "google-cloud-dialogflow": "2.54.0",
+    "google-api-core": "2.30.3",
+    "grpcio": "1.85.0",
+    "protobuf": "6.33.6",
+    "requests": "2.32.4",
+    "flask": "3.1.3",
+    "waitress": "3.0.2",
+    "pyngrok": "9.1.2",
+    "numpy": "2.4.6",
+    "scipy": "1.16.3",
+    "pandas": "2.2.3",
+    "statsmodels": "0.15.0"
+  },
+  "timing": "time.perf_counter() around the client call only; entity lookup for B is outside the timed region; webhook timings are server-side.",
+  "config": {
+    "out_dir": "/content/bench_out",
+    "queries_file": "/content/queries.json",
+    "df_projects": {
+      "weather": "newagent-nfxj",
+      "capital": "pizzabot-bjpa",
+      "currency": "currency-rhva",
+      "joke": "jokeapi-acmj"
+    },
+    "df_credentials": {
+      "weather": true,
+      "capital": true,
+      "currency": true,
+      "joke": true
+    },
+    "df_location": "global",
+    "df_language": "en",
+    "intents": {
+      "weather": "How is the weather?",
+      "capital": "GetCapital",
+      "currency": "ConvertCurrency",
+      "joke": "GetJoke"
+    },
+    "openweather_key": true,
+    "ngrok_token": true,
+    "ngrok_region": "us",
+    "webhook_port": 5005,
+    "webhook_server": "waitress",
+    "webhook_threads": 160,
+    "webhook_connection_limit": 2000,
+    "timeout_df_s": 20.0,
+    "timeout_api_s": 10.0,
+    "timeout_webhook_s": 20.0,
+    "max_retries": 1,
+    "retry_backoff_s": 0.3,
+    "reuse_connections": true,
+    "warmup_requests": 5,
+    "seq_reps": 5,
+    "seq_gap_s": 0.2,
+    "seq_archs": [
+      "A",
+      "C",
+      "L",
+      "B"
+    ],
+    "burst_sizes": [
+      10,
+      20,
+      40,
+      60,
+      80,
+      90
+    ],
+    "burst_runs": 5,
+    "burst_gap_s": 45.0,
+    "burst_mode": "separate",
+    "burst_archs": [
+      "A",
+      "B"
+    ],
+    "sustained_rates_rps": [
+      0.5,
+      1.0,
+      2.0,
+      3.0
+    ],
+    "sustained_duration_s": 120.0,
+    "sustained_archs": [
+      "A",
+      "B"
+    ],
+    "sustained_max_workers": 256,
+    "seed": 20261103
+  },
+  "public_webhook": "https://REDACTED-TUNNEL-HOST"
+}

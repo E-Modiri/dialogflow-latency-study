@@ -1,0 +1,61 @@
+pair,query,from,to,correct
+USD_EUR,How much is USD in EUR?,USD,EUR,True
+USD_GBP,Convert US dollar to British pound,USD,GBP,True
+USD_JPY,How many yen is one US dollar?,USD,JPY,True
+USD_CHF,What is USD in Swiss franc?,USD,CHF,True
+USD_AUD,Convert USD to Australian dollar,USD,AUD,True
+USD_CAD,How much is USD in Canadian dollar?,USD,CAD,True
+USD_CNY,What is US dollar in Chinese yuan?,USD,CNY,True
+USD_INR,Convert USD to Indian rupee,USD,INR,True
+USD_KRW,How much is USD in Korean won?,USD,KRW,True
+USD_MXN,What is USD in Mexican peso?,USD,MXN,True
+USD_BRL,Convert US dollar to Brazilian real,USD,BRL,True
+USD_SGD,How much is USD in Singapore dollar?,USD,SGD,True
+USD_HKD,What is USD in Hong Kong dollar?,USD,HKD,True
+USD_NOK,Convert USD to Norwegian krone,USD,NOK,True
+USD_SEK,How much is USD in Swedish krona?,USD,SEK,True
+USD_DKK,What is USD in Danish krone?,USD,DKK,True
+USD_PLN,Convert US dollar to Polish zloty,USD,PLN,True
+USD_ZAR,How much is USD in South African rand?,USD,ZAR,True
+USD_TRY,What is USD in Turkish lira?,USD,TRY,True
+USD_THB,Convert USD to Thai baht,USD,THB,True
+USD_IDR,How much is USD in Indonesian rupiah?,USD,IDR,True
+USD_PHP,What is USD in Philippine peso?,USD,PHP,True
+USD_MYR,Convert USD to Malaysian ringgit,USD,MYR,True
+USD_NZD,How much is USD in New Zealand dollar?,USD,NZD,True
+USD_HUF,What is USD in Hungarian forint?,USD,HUF,True
+USD_CZK,Convert US dollar to Czech koruna,USD,CZK,True
+USD_RON,How much is USD in Romanian leu?,USD,RON,True
+USD_BGN,What is USD in Bulgarian lev?,USD,BGN,True
+USD_ILS,Convert USD to Israeli shekel,USD,ILS,True
+USD_ARS,How much is USD in Argentine peso?,USD,ARS,True
+USD_AED,What is USD in UAE dirham?,USD,AED,True
+USD_ISK,Convert USD to Icelandic krona,USD,ISK,True
+EUR_GBP,Convert EUR to British pound,EUR,GBP,True
+EUR_JPY,What is euro in Japanese yen?,EUR,JPY,True
+EUR_CHF,How much is EUR in Swiss franc?,EUR,CHF,True
+EUR_AUD,Convert euro to Australian dollar,EUR,AUD,True
+EUR_CAD,What is EUR in Canadian dollar?,EUR,CAD,True
+EUR_CNY,How much is euro in Chinese yuan?,EUR,CNY,True
+EUR_INR,Convert EUR to Indian rupee,EUR,INR,True
+EUR_KRW,What is euro in Korean won?,EUR,KRW,True
+EUR_MXN,How much is EUR in Mexican peso?,EUR,MXN,True
+EUR_BRL,Convert euro to Brazilian real,EUR,BRL,True
+EUR_SGD,What is EUR in Singapore dollar?,EUR,SGD,True
+EUR_NOK,How much is euro in Norwegian krone?,EUR,NOK,True
+EUR_PLN,Convert EUR to Polish zloty,EUR,PLN,True
+EUR_ZAR,What is euro in South African rand?,EUR,ZAR,True
+EUR_TRY,How much is EUR in Turkish lira?,EUR,TRY,True
+EUR_HUF,Convert euro to Hungarian forint,EUR,HUF,True
+GBP_JPY,What is pound sterling in Japanese yen?,GBP,JPY,True
+GBP_CHF,How much is GBP in Swiss franc?,GBP,CHF,True
+GBP_AUD,Convert British pound to Australian dollar,GBP,AUD,True
+GBP_CAD,What is GBP in Canadian dollar?,GBP,CAD,True
+GBP_CNY,How much is pound sterling in Chinese yuan?,GBP,CNY,True
+GBP_INR,Convert GBP to Indian rupee,GBP,INR,True
+JPY_USD,What is Japanese yen in US dollars?,JPY,USD,True
+JPY_EUR,How much is yen in euros?,JPY,EUR,True
+JPY_GBP,Convert Japanese yen to British pound,JPY,GBP,True
+CHF_JPY,What is Swiss franc in Japanese yen?,CHF,JPY,True
+CHF_GBP,How much is CHF in British pound?,CHF,GBP,True
+AUD_NZD,Convert Australian dollar to New Zealand dollar,AUD,NZD,True

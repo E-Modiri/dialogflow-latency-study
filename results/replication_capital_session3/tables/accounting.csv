@@ -1,0 +1,9 @@
+experiment,domain,arch,logical_requests,attempts,retries,first_attempt_success,eventual_success,success_after_retry,entity_mismatch_but_api_ok,first_fail_api,in_common_paired_set,excluded_from_paired_set,first_fail_quota
+burst,capital,A,1500,1500,0,1475,1475,0,22,25,0.0,0.0,0.0
+burst,capital,B,1500,1500,0,1478,1478,0,0,22,0.0,0.0,0.0
+sequential,capital,A,400,400,0,284,284,0,3,116,276.0,124.0,0.0
+sequential,capital,B,400,512,112,285,286,1,0,3,276.0,124.0,112.0
+sequential,capital,C,400,400,0,283,283,0,0,117,276.0,124.0,0.0
+sequential,capital,L,400,400,0,287,287,0,0,113,276.0,124.0,0.0
+sustained,capital,A,766,766,0,755,755,0,11,11,0.0,0.0,0.0
+sustained,capital,B,777,777,0,766,766,0,0,11,0.0,0.0,0.0

@@ -1,0 +1,1186 @@
+{
+ "weather": {
+  "queries": [
+   {
+    "label": "New York",
+    "text": "What is the weather in New York?"
+   },
+   {
+    "label": "Los Angeles",
+    "text": "How is the weather in Los Angeles?"
+   },
+   {
+    "label": "Chicago",
+    "text": "Tell me the weather in Chicago"
+   },
+   {
+    "label": "Houston",
+    "text": "What is the weather in Houston?"
+   },
+   {
+    "label": "Phoenix",
+    "text": "How is the weather in Phoenix?"
+   },
+   {
+    "label": "Philadelphia",
+    "text": "What is the weather in Philadelphia?"
+   },
+   {
+    "label": "San Antonio",
+    "text": "Tell me the weather in San Antonio"
+   },
+   {
+    "label": "San Diego",
+    "text": "How is the weather in San Diego?"
+   },
+   {
+    "label": "Dallas",
+    "text": "What is the weather in Dallas?"
+   },
+   {
+    "label": "San Jose",
+    "text": "How is the weather in San Jose?"
+   },
+   {
+    "label": "Austin",
+    "text": "What is the weather in Austin?"
+   },
+   {
+    "label": "Jacksonville",
+    "text": "Tell me the weather in Jacksonville"
+   },
+   {
+    "label": "Fort Worth",
+    "text": "How is the weather in Fort Worth?"
+   },
+   {
+    "label": "Columbus",
+    "text": "What is the weather in Columbus?"
+   },
+   {
+    "label": "Charlotte",
+    "text": "Tell me the weather in Charlotte"
+   },
+   {
+    "label": "Indianapolis",
+    "text": "How is the weather in Indianapolis?"
+   },
+   {
+    "label": "San Francisco",
+    "text": "What is the weather in San Francisco?"
+   },
+   {
+    "label": "Seattle",
+    "text": "Tell me the weather in Seattle"
+   },
+   {
+    "label": "Denver",
+    "text": "How is the weather in Denver?"
+   },
+   {
+    "label": "Nashville",
+    "text": "What is the weather in Nashville?"
+   },
+   {
+    "label": "Oklahoma City",
+    "text": "Tell me the weather in Oklahoma City"
+   },
+   {
+    "label": "El Paso",
+    "text": "How is the weather in El Paso?"
+   },
+   {
+    "label": "Washington",
+    "text": "What is the weather in Washington?"
+   },
+   {
+    "label": "Boston",
+    "text": "Tell me the weather in Boston"
+   },
+   {
+    "label": "Las Vegas",
+    "text": "How is the weather in Las Vegas?"
+   },
+   {
+    "label": "Memphis",
+    "text": "What is the weather in Memphis?"
+   },
+   {
+    "label": "Louisville",
+    "text": "Tell me the weather in Louisville"
+   },
+   {
+    "label": "Portland",
+    "text": "How is the weather in Portland?"
+   },
+   {
+    "label": "Baltimore",
+    "text": "What is the weather in Baltimore?"
+   },
+   {
+    "label": "Milwaukee",
+    "text": "Tell me the weather in Milwaukee"
+   },
+   {
+    "label": "Albuquerque",
+    "text": "How is the weather in Albuquerque?"
+   },
+   {
+    "label": "Tucson",
+    "text": "What is the weather in Tucson?"
+   },
+   {
+    "label": "Fresno",
+    "text": "Tell me the weather in Fresno"
+   },
+   {
+    "label": "Sacramento",
+    "text": "How is the weather in Sacramento?"
+   },
+   {
+    "label": "Mesa",
+    "text": "What is the weather in Mesa?"
+   },
+   {
+    "label": "Atlanta",
+    "text": "Tell me the weather in Atlanta"
+   },
+   {
+    "label": "Kansas City",
+    "text": "How is the weather in Kansas City?"
+   },
+   {
+    "label": "Omaha",
+    "text": "What is the weather in Omaha?"
+   },
+   {
+    "label": "Raleigh",
+    "text": "Tell me the weather in Raleigh"
+   },
+   {
+    "label": "Miami",
+    "text": "How is the weather in Miami?"
+   },
+   {
+    "label": "Cleveland",
+    "text": "What is the weather in Cleveland?"
+   },
+   {
+    "label": "Tulsa",
+    "text": "Tell me the weather in Tulsa"
+   },
+   {
+    "label": "Arlington",
+    "text": "How is the weather in Arlington?"
+   },
+   {
+    "label": "New Orleans",
+    "text": "What is the weather in New Orleans?"
+   },
+   {
+    "label": "Wichita",
+    "text": "Tell me the weather in Wichita"
+   },
+   {
+    "label": "Tampa",
+    "text": "How is the weather in Tampa?"
+   },
+   {
+    "label": "Aurora",
+    "text": "What is the weather in Aurora?"
+   },
+   {
+    "label": "Bakersfield",
+    "text": "Tell me the weather in Bakersfield"
+   },
+   {
+    "label": "Anaheim",
+    "text": "How is the weather in Anaheim?"
+   },
+   {
+    "label": "Santa Ana",
+    "text": "What is the weather in Santa Ana?"
+   },
+   {
+    "label": "Corpus Christi",
+    "text": "Tell me the weather in Corpus Christi"
+   },
+   {
+    "label": "Riverside",
+    "text": "How is the weather in Riverside?"
+   },
+   {
+    "label": "Lexington",
+    "text": "What is the weather in Lexington?"
+   },
+   {
+    "label": "Stockton",
+    "text": "Tell me the weather in Stockton"
+   },
+   {
+    "label": "Pittsburgh",
+    "text": "How is the weather in Pittsburgh?"
+   },
+   {
+    "label": "St. Louis",
+    "text": "What is the weather in St. Louis?"
+   },
+   {
+    "label": "Anchorage",
+    "text": "Tell me the weather in Anchorage"
+   },
+   {
+    "label": "Cincinnati",
+    "text": "How is the weather in Cincinnati?"
+   },
+   {
+    "label": "St. Paul",
+    "text": "What is the weather in St. Paul?"
+   },
+   {
+    "label": "Greensboro",
+    "text": "Tell me the weather in Greensboro"
+   },
+   {
+    "label": "Toledo",
+    "text": "How is the weather in Toledo?"
+   },
+   {
+    "label": "Newark",
+    "text": "What is the weather in Newark?"
+   },
+   {
+    "label": "Plano",
+    "text": "Tell me the weather in Plano"
+   },
+   {
+    "label": "Henderson",
+    "text": "How is the weather in Henderson?"
+   },
+   {
+    "label": "Orlando",
+    "text": "What is the weather in Orlando?"
+   },
+   {
+    "label": "Chandler",
+    "text": "Tell me the weather in Chandler"
+   },
+   {
+    "label": "Laredo",
+    "text": "How is the weather in Laredo?"
+   },
+   {
+    "label": "Norfolk",
+    "text": "What is the weather in Norfolk?"
+   },
+   {
+    "label": "Madison",
+    "text": "Tell me the weather in Madison"
+   },
+   {
+    "label": "Durham",
+    "text": "How is the weather in Durham?"
+   },
+   {
+    "label": "Lubbock",
+    "text": "What is the weather in Lubbock?"
+   },
+   {
+    "label": "Scottsdale",
+    "text": "Tell me the weather in Scottsdale"
+   },
+   {
+    "label": "Reno",
+    "text": "How is the weather in Reno?"
+   },
+   {
+    "label": "Buffalo",
+    "text": "What is the weather in Buffalo?"
+   },
+   {
+    "label": "Baton Rouge",
+    "text": "Tell me the weather in Baton Rouge"
+   },
+   {
+    "label": "Spokane",
+    "text": "How is the weather in Spokane?"
+   },
+   {
+    "label": "Glendale",
+    "text": "What is the weather in Glendale?"
+   },
+   {
+    "label": "Boise",
+    "text": "Tell me the weather in Boise"
+   },
+   {
+    "label": "Richmond",
+    "text": "How is the weather in Richmond?"
+   }
+  ],
+  "aliases": {
+   "new york": "New York",
+   "los angeles": "Los Angeles",
+   "chicago": "Chicago",
+   "houston": "Houston",
+   "phoenix": "Phoenix",
+   "philadelphia": "Philadelphia",
+   "san antonio": "San Antonio",
+   "san diego": "San Diego",
+   "dallas": "Dallas",
+   "san jose": "San Jose",
+   "austin": "Austin",
+   "jacksonville": "Jacksonville",
+   "fort worth": "Fort Worth",
+   "columbus": "Columbus",
+   "charlotte": "Charlotte",
+   "indianapolis": "Indianapolis",
+   "san francisco": "San Francisco",
+   "seattle": "Seattle",
+   "denver": "Denver",
+   "nashville": "Nashville",
+   "oklahoma city": "Oklahoma City",
+   "el paso": "El Paso",
+   "washington": "Washington",
+   "boston": "Boston",
+   "las vegas": "Las Vegas",
+   "memphis": "Memphis",
+   "louisville": "Louisville",
+   "portland": "Portland",
+   "baltimore": "Baltimore",
+   "milwaukee": "Milwaukee",
+   "albuquerque": "Albuquerque",
+   "tucson": "Tucson",
+   "fresno": "Fresno",
+   "sacramento": "Sacramento",
+   "mesa": "Mesa",
+   "atlanta": "Atlanta",
+   "kansas city": "Kansas City",
+   "omaha": "Omaha",
+   "raleigh": "Raleigh",
+   "miami": "Miami",
+   "cleveland": "Cleveland",
+   "tulsa": "Tulsa",
+   "arlington": "Arlington",
+   "new orleans": "New Orleans",
+   "wichita": "Wichita",
+   "tampa": "Tampa",
+   "aurora": "Aurora",
+   "bakersfield": "Bakersfield",
+   "anaheim": "Anaheim",
+   "santa ana": "Santa Ana",
+   "corpus christi": "Corpus Christi",
+   "riverside": "Riverside",
+   "lexington": "Lexington",
+   "stockton": "Stockton",
+   "pittsburgh": "Pittsburgh",
+   "st. louis": "St. Louis",
+   "anchorage": "Anchorage",
+   "cincinnati": "Cincinnati",
+   "st. paul": "St. Paul",
+   "greensboro": "Greensboro",
+   "toledo": "Toledo",
+   "newark": "Newark",
+   "plano": "Plano",
+   "henderson": "Henderson",
+   "orlando": "Orlando",
+   "chandler": "Chandler",
+   "laredo": "Laredo",
+   "norfolk": "Norfolk",
+   "madison": "Madison",
+   "durham": "Durham",
+   "lubbock": "Lubbock",
+   "scottsdale": "Scottsdale",
+   "reno": "Reno",
+   "buffalo": "Buffalo",
+   "baton rouge": "Baton Rouge",
+   "spokane": "Spokane",
+   "glendale": "Glendale",
+   "boise": "Boise",
+   "richmond": "Richmond"
+  }
+ },
+ "capital": {
+  "queries": [
+   {
+    "label": "France",
+    "text": "What is the capital of France?"
+   },
+   {
+    "label": "Germany",
+    "text": "Tell me the capital city of Germany"
+   },
+   {
+    "label": "Italy",
+    "text": "What is the capital of Italy?"
+   },
+   {
+    "label": "Spain",
+    "text": "Tell me the capital city of Spain"
+   },
+   {
+    "label": "Portugal",
+    "text": "What is the capital of Portugal?"
+   },
+   {
+    "label": "Netherlands",
+    "text": "Tell me the capital of Netherlands"
+   },
+   {
+    "label": "Belgium",
+    "text": "What is the capital city of Belgium?"
+   },
+   {
+    "label": "Sweden",
+    "text": "Tell me the capital of Sweden"
+   },
+   {
+    "label": "Norway",
+    "text": "What is the capital city of Norway?"
+   },
+   {
+    "label": "Denmark",
+    "text": "Tell me the capital of Denmark"
+   },
+   {
+    "label": "Finland",
+    "text": "What is the capital city of Finland?"
+   },
+   {
+    "label": "Poland",
+    "text": "Tell me the capital of Poland"
+   },
+   {
+    "label": "Austria",
+    "text": "What is the capital of Austria?"
+   },
+   {
+    "label": "Switzerland",
+    "text": "Tell me the capital city of Switzerland"
+   },
+   {
+    "label": "Greece",
+    "text": "What is the capital of Greece?"
+   },
+   {
+    "label": "Czech Republic",
+    "text": "Tell me the capital of Czech Republic"
+   },
+   {
+    "label": "Hungary",
+    "text": "What is the capital city of Hungary?"
+   },
+   {
+    "label": "Romania",
+    "text": "Tell me the capital of Romania"
+   },
+   {
+    "label": "Ukraine",
+    "text": "What is the capital city of Ukraine?"
+   },
+   {
+    "label": "Croatia",
+    "text": "Tell me the capital of Croatia"
+   },
+   {
+    "label": "Japan",
+    "text": "What is the capital of Japan?"
+   },
+   {
+    "label": "China",
+    "text": "Tell me the capital city of China"
+   },
+   {
+    "label": "India",
+    "text": "What is the capital of India?"
+   },
+   {
+    "label": "South Korea",
+    "text": "Tell me the capital of South Korea"
+   },
+   {
+    "label": "Thailand",
+    "text": "What is the capital city of Thailand?"
+   },
+   {
+    "label": "Vietnam",
+    "text": "Tell me the capital of Vietnam"
+   },
+   {
+    "label": "Indonesia",
+    "text": "What is the capital city of Indonesia?"
+   },
+   {
+    "label": "Malaysia",
+    "text": "Tell me the capital of Malaysia"
+   },
+   {
+    "label": "Philippines",
+    "text": "What is the capital city of Philippines?"
+   },
+   {
+    "label": "Pakistan",
+    "text": "Tell me the capital of Pakistan"
+   },
+   {
+    "label": "Bangladesh",
+    "text": "What is the capital city of Bangladesh?"
+   },
+   {
+    "label": "Iran",
+    "text": "Tell me the capital of Iran"
+   },
+   {
+    "label": "Iraq",
+    "text": "What is the capital city of Iraq?"
+   },
+   {
+    "label": "Saudi Arabia",
+    "text": "Tell me the capital of Saudi Arabia"
+   },
+   {
+    "label": "UAE",
+    "text": "What is the capital of UAE?"
+   },
+   {
+    "label": "Jordan",
+    "text": "Tell me the capital city of Jordan"
+   },
+   {
+    "label": "Israel",
+    "text": "What is the capital of Israel?"
+   },
+   {
+    "label": "Kazakhstan",
+    "text": "Tell me the capital of Kazakhstan"
+   },
+   {
+    "label": "Uzbekistan",
+    "text": "What is the capital city of Uzbekistan?"
+   },
+   {
+    "label": "Nepal",
+    "text": "Tell me the capital of Nepal"
+   },
+   {
+    "label": "Canada",
+    "text": "What is the capital of Canada?"
+   },
+   {
+    "label": "Mexico",
+    "text": "Tell me the capital city of Mexico"
+   },
+   {
+    "label": "Brazil",
+    "text": "What is the capital of Brazil?"
+   },
+   {
+    "label": "Argentina",
+    "text": "Tell me the capital of Argentina"
+   },
+   {
+    "label": "Chile",
+    "text": "What is the capital city of Chile?"
+   },
+   {
+    "label": "Colombia",
+    "text": "Tell me the capital of Colombia"
+   },
+   {
+    "label": "Peru",
+    "text": "What is the capital city of Peru?"
+   },
+   {
+    "label": "Venezuela",
+    "text": "Tell me the capital of Venezuela"
+   },
+   {
+    "label": "Ecuador",
+    "text": "What is the capital city of Ecuador?"
+   },
+   {
+    "label": "Bolivia",
+    "text": "Tell me the capital of Bolivia"
+   },
+   {
+    "label": "Uruguay",
+    "text": "What is the capital city of Uruguay?"
+   },
+   {
+    "label": "Paraguay",
+    "text": "Tell me the capital of Paraguay"
+   },
+   {
+    "label": "Cuba",
+    "text": "What is the capital city of Cuba?"
+   },
+   {
+    "label": "Costa Rica",
+    "text": "Tell me the capital of Costa Rica"
+   },
+   {
+    "label": "Panama",
+    "text": "What is the capital city of Panama?"
+   },
+   {
+    "label": "Guatemala",
+    "text": "Tell me the capital of Guatemala"
+   },
+   {
+    "label": "Honduras",
+    "text": "What is the capital city of Honduras?"
+   },
+   {
+    "label": "El Salvador",
+    "text": "Tell me the capital of El Salvador"
+   },
+   {
+    "label": "Nicaragua",
+    "text": "What is the capital city of Nicaragua?"
+   },
+   {
+    "label": "Jamaica",
+    "text": "Tell me the capital of Jamaica"
+   },
+   {
+    "label": "Nigeria",
+    "text": "What is the capital of Nigeria?"
+   },
+   {
+    "label": "Egypt",
+    "text": "Tell me the capital city of Egypt"
+   },
+   {
+    "label": "South Africa",
+    "text": "What is the capital of South Africa?"
+   },
+   {
+    "label": "Kenya",
+    "text": "Tell me the capital of Kenya"
+   },
+   {
+    "label": "Ethiopia",
+    "text": "What is the capital city of Ethiopia?"
+   },
+   {
+    "label": "Ghana",
+    "text": "Tell me the capital of Ghana"
+   },
+   {
+    "label": "Tanzania",
+    "text": "What is the capital city of Tanzania?"
+   },
+   {
+    "label": "Morocco",
+    "text": "Tell me the capital of Morocco"
+   },
+   {
+    "label": "Algeria",
+    "text": "What is the capital city of Algeria?"
+   },
+   {
+    "label": "Tunisia",
+    "text": "Tell me the capital of Tunisia"
+   },
+   {
+    "label": "Libya",
+    "text": "What is the capital city of Libya?"
+   },
+   {
+    "label": "Sudan",
+    "text": "Tell me the capital of Sudan"
+   },
+   {
+    "label": "Cameroon",
+    "text": "What is the capital city of Cameroon?"
+   },
+   {
+    "label": "Uganda",
+    "text": "Tell me the capital of Uganda"
+   },
+   {
+    "label": "Zimbabwe",
+    "text": "What is the capital city of Zimbabwe?"
+   },
+   {
+    "label": "Zambia",
+    "text": "Tell me the capital of Zambia"
+   },
+   {
+    "label": "Mozambique",
+    "text": "What is the capital city of Mozambique?"
+   },
+   {
+    "label": "Senegal",
+    "text": "Tell me the capital of Senegal"
+   },
+   {
+    "label": "Angola",
+    "text": "What is the capital city of Angola?"
+   },
+   {
+    "label": "Rwanda",
+    "text": "Tell me the capital of Rwanda"
+   }
+  ],
+  "aliases": {
+   "france": "France",
+   "germany": "Germany",
+   "italy": "Italy",
+   "spain": "Spain",
+   "portugal": "Portugal",
+   "netherlands": "Netherlands",
+   "belgium": "Belgium",
+   "sweden": "Sweden",
+   "norway": "Norway",
+   "denmark": "Denmark",
+   "finland": "Finland",
+   "poland": "Poland",
+   "austria": "Austria",
+   "switzerland": "Switzerland",
+   "greece": "Greece",
+   "czech republic": "Czech Republic",
+   "hungary": "Hungary",
+   "romania": "Romania",
+   "ukraine": "Ukraine",
+   "croatia": "Croatia",
+   "japan": "Japan",
+   "china": "China",
+   "india": "India",
+   "south korea": "South Korea",
+   "thailand": "Thailand",
+   "vietnam": "Vietnam",
+   "indonesia": "Indonesia",
+   "malaysia": "Malaysia",
+   "philippines": "Philippines",
+   "pakistan": "Pakistan",
+   "bangladesh": "Bangladesh",
+   "iran": "Iran",
+   "iraq": "Iraq",
+   "saudi arabia": "Saudi Arabia",
+   "uae": "UAE",
+   "jordan": "Jordan",
+   "israel": "Israel",
+   "kazakhstan": "Kazakhstan",
+   "uzbekistan": "Uzbekistan",
+   "nepal": "Nepal",
+   "canada": "Canada",
+   "mexico": "Mexico",
+   "brazil": "Brazil",
+   "argentina": "Argentina",
+   "chile": "Chile",
+   "colombia": "Colombia",
+   "peru": "Peru",
+   "venezuela": "Venezuela",
+   "ecuador": "Ecuador",
+   "bolivia": "Bolivia",
+   "uruguay": "Uruguay",
+   "paraguay": "Paraguay",
+   "cuba": "Cuba",
+   "costa rica": "Costa Rica",
+   "panama": "Panama",
+   "guatemala": "Guatemala",
+   "honduras": "Honduras",
+   "el salvador": "El Salvador",
+   "nicaragua": "Nicaragua",
+   "jamaica": "Jamaica",
+   "nigeria": "Nigeria",
+   "egypt": "Egypt",
+   "south africa": "South Africa",
+   "kenya": "Kenya",
+   "ethiopia": "Ethiopia",
+   "ghana": "Ghana",
+   "tanzania": "Tanzania",
+   "morocco": "Morocco",
+   "algeria": "Algeria",
+   "tunisia": "Tunisia",
+   "libya": "Libya",
+   "sudan": "Sudan",
+   "cameroon": "Cameroon",
+   "uganda": "Uganda",
+   "zimbabwe": "Zimbabwe",
+   "zambia": "Zambia",
+   "mozambique": "Mozambique",
+   "senegal": "Senegal",
+   "angola": "Angola",
+   "rwanda": "Rwanda"
+  }
+ },
+ "currency": {
+  "queries": [
+   {
+    "label": "USD_EUR",
+    "text": "How much is USD in EUR?"
+   },
+   {
+    "label": "USD_GBP",
+    "text": "Convert US dollar to British pound"
+   },
+   {
+    "label": "USD_JPY",
+    "text": "How many yen is one US dollar?"
+   },
+   {
+    "label": "USD_CHF",
+    "text": "What is USD in Swiss franc?"
+   },
+   {
+    "label": "USD_AUD",
+    "text": "Convert USD to Australian dollar"
+   },
+   {
+    "label": "USD_CAD",
+    "text": "How much is USD in Canadian dollar?"
+   },
+   {
+    "label": "USD_CNY",
+    "text": "What is US dollar in Chinese yuan?"
+   },
+   {
+    "label": "USD_INR",
+    "text": "Convert USD to Indian rupee"
+   },
+   {
+    "label": "USD_KRW",
+    "text": "How much is USD in Korean won?"
+   },
+   {
+    "label": "USD_MXN",
+    "text": "What is USD in Mexican peso?"
+   },
+   {
+    "label": "USD_BRL",
+    "text": "Convert US dollar to Brazilian real"
+   },
+   {
+    "label": "USD_SGD",
+    "text": "How much is USD in Singapore dollar?"
+   },
+   {
+    "label": "USD_HKD",
+    "text": "What is USD in Hong Kong dollar?"
+   },
+   {
+    "label": "USD_NOK",
+    "text": "Convert USD to Norwegian krone"
+   },
+   {
+    "label": "USD_SEK",
+    "text": "How much is USD in Swedish krona?"
+   },
+   {
+    "label": "USD_DKK",
+    "text": "What is USD in Danish krone?"
+   },
+   {
+    "label": "USD_PLN",
+    "text": "Convert US dollar to Polish zloty"
+   },
+   {
+    "label": "USD_ZAR",
+    "text": "How much is USD in South African rand?"
+   },
+   {
+    "label": "USD_TRY",
+    "text": "What is USD in Turkish lira?"
+   },
+   {
+    "label": "USD_THB",
+    "text": "Convert USD to Thai baht"
+   },
+   {
+    "label": "USD_IDR",
+    "text": "How much is USD in Indonesian rupiah?"
+   },
+   {
+    "label": "USD_PHP",
+    "text": "What is USD in Philippine peso?"
+   },
+   {
+    "label": "USD_MYR",
+    "text": "Convert USD to Malaysian ringgit"
+   },
+   {
+    "label": "USD_NZD",
+    "text": "How much is USD in New Zealand dollar?"
+   },
+   {
+    "label": "USD_HUF",
+    "text": "What is USD in Hungarian forint?"
+   },
+   {
+    "label": "USD_CZK",
+    "text": "Convert US dollar to Czech koruna"
+   },
+   {
+    "label": "USD_RON",
+    "text": "How much is USD in Romanian leu?"
+   },
+   {
+    "label": "USD_BGN",
+    "text": "What is USD in Bulgarian lev?"
+   },
+   {
+    "label": "USD_ILS",
+    "text": "Convert USD to Israeli shekel"
+   },
+   {
+    "label": "USD_ARS",
+    "text": "How much is USD in Argentine peso?"
+   },
+   {
+    "label": "USD_AED",
+    "text": "What is USD in UAE dirham?"
+   },
+   {
+    "label": "USD_ISK",
+    "text": "Convert USD to Icelandic krona"
+   },
+   {
+    "label": "EUR_GBP",
+    "text": "Convert EUR to British pound"
+   },
+   {
+    "label": "EUR_JPY",
+    "text": "What is euro in Japanese yen?"
+   },
+   {
+    "label": "EUR_CHF",
+    "text": "How much is EUR in Swiss franc?"
+   },
+   {
+    "label": "EUR_AUD",
+    "text": "Convert euro to Australian dollar"
+   },
+   {
+    "label": "EUR_CAD",
+    "text": "What is EUR in Canadian dollar?"
+   },
+   {
+    "label": "EUR_CNY",
+    "text": "How much is euro in Chinese yuan?"
+   },
+   {
+    "label": "EUR_INR",
+    "text": "Convert EUR to Indian rupee"
+   },
+   {
+    "label": "EUR_KRW",
+    "text": "What is euro in Korean won?"
+   },
+   {
+    "label": "EUR_MXN",
+    "text": "How much is EUR in Mexican peso?"
+   },
+   {
+    "label": "EUR_BRL",
+    "text": "Convert euro to Brazilian real"
+   },
+   {
+    "label": "EUR_SGD",
+    "text": "What is EUR in Singapore dollar?"
+   },
+   {
+    "label": "EUR_NOK",
+    "text": "How much is euro in Norwegian krone?"
+   },
+   {
+    "label": "EUR_PLN",
+    "text": "Convert EUR to Polish zloty"
+   },
+   {
+    "label": "EUR_ZAR",
+    "text": "What is euro in South African rand?"
+   },
+   {
+    "label": "EUR_TRY",
+    "text": "How much is EUR in Turkish lira?"
+   },
+   {
+    "label": "EUR_HUF",
+    "text": "Convert euro to Hungarian forint"
+   },
+   {
+    "label": "GBP_JPY",
+    "text": "What is pound sterling in Japanese yen?"
+   },
+   {
+    "label": "GBP_CHF",
+    "text": "How much is GBP in Swiss franc?"
+   },
+   {
+    "label": "GBP_AUD",
+    "text": "Convert British pound to Australian dollar"
+   },
+   {
+    "label": "GBP_CAD",
+    "text": "What is GBP in Canadian dollar?"
+   },
+   {
+    "label": "GBP_CNY",
+    "text": "How much is pound sterling in Chinese yuan?"
+   },
+   {
+    "label": "GBP_INR",
+    "text": "Convert GBP to Indian rupee"
+   },
+   {
+    "label": "JPY_USD",
+    "text": "What is Japanese yen in US dollars?"
+   },
+   {
+    "label": "JPY_EUR",
+    "text": "How much is yen in euros?"
+   },
+   {
+    "label": "JPY_GBP",
+    "text": "Convert Japanese yen to British pound"
+   },
+   {
+    "label": "CHF_JPY",
+    "text": "What is Swiss franc in Japanese yen?"
+   },
+   {
+    "label": "CHF_GBP",
+    "text": "How much is CHF in British pound?"
+   },
+   {
+    "label": "AUD_NZD",
+    "text": "Convert Australian dollar to New Zealand dollar"
+   }
+  ],
+  "aliases": {
+   "usd": "USD",
+   "dollar": "USD",
+   "dollars": "USD",
+   "us dollar": "USD",
+   "eur": "EUR",
+   "euro": "EUR",
+   "euros": "EUR",
+   "gbp": "GBP",
+   "pound": "GBP",
+   "pounds": "GBP",
+   "sterling": "GBP",
+   "pound sterling": "GBP",
+   "jpy": "JPY",
+   "yen": "JPY",
+   "japanese yen": "JPY",
+   "chf": "CHF",
+   "swiss franc": "CHF",
+   "franc": "CHF",
+   "aud": "AUD",
+   "australian dollar": "AUD",
+   "australian": "AUD",
+   "cad": "CAD",
+   "canadian dollar": "CAD",
+   "canadian": "CAD",
+   "cny": "CNY",
+   "yuan": "CNY",
+   "chinese yuan": "CNY",
+   "renminbi": "CNY",
+   "inr": "INR",
+   "rupee": "INR",
+   "indian rupee": "INR",
+   "krw": "KRW",
+   "won": "KRW",
+   "korean won": "KRW",
+   "mxn": "MXN",
+   "peso": "MXN",
+   "mexican peso": "MXN",
+   "brl": "BRL",
+   "real": "BRL",
+   "brazilian real": "BRL",
+   "sgd": "SGD",
+   "singapore dollar": "SGD",
+   "hkd": "HKD",
+   "hong kong dollar": "HKD",
+   "nok": "NOK",
+   "norwegian krone": "NOK",
+   "krone": "NOK",
+   "sek": "SEK",
+   "swedish krona": "SEK",
+   "krona": "SEK",
+   "dkk": "DKK",
+   "danish krone": "DKK",
+   "pln": "PLN",
+   "zloty": "PLN",
+   "polish zloty": "PLN",
+   "zar": "ZAR",
+   "rand": "ZAR",
+   "south african rand": "ZAR",
+   "try": "TRY",
+   "lira": "TRY",
+   "turkish lira": "TRY",
+   "thb": "THB",
+   "baht": "THB",
+   "thai baht": "THB",
+   "idr": "IDR",
+   "rupiah": "IDR",
+   "indonesian rupiah": "IDR",
+   "php": "PHP",
+   "philippine peso": "PHP",
+   "myr": "MYR",
+   "ringgit": "MYR",
+   "malaysian ringgit": "MYR",
+   "nzd": "NZD",
+   "new zealand dollar": "NZD",
+   "huf": "HUF",
+   "forint": "HUF",
+   "hungarian forint": "HUF",
+   "czk": "CZK",
+   "koruna": "CZK",
+   "czech koruna": "CZK",
+   "ron": "RON",
+   "leu": "RON",
+   "romanian leu": "RON",
+   "bgn": "BGN",
+   "lev": "BGN",
+   "bulgarian lev": "BGN",
+   "ils": "ILS",
+   "shekel": "ILS",
+   "israeli shekel": "ILS",
+   "ars": "ARS",
+   "argentine peso": "ARS",
+   "aed": "AED",
+   "dirham": "AED",
+   "uae dirham": "AED",
+   "isk": "ISK",
+   "icelandic krona": "ISK"
+  }
+ },
+ "joke": {
+  "queries": [
+   {
+    "label": "programming",
+    "text": "Tell me a programming joke"
+   },
+   {
+    "label": "dark",
+    "text": "Give me a dark joke"
+   },
+   {
+    "label": "pun",
+    "text": "Tell me a pun joke"
+   },
+   {
+    "label": "misc",
+    "text": "Give me a misc joke"
+   },
+   {
+    "label": "christmas",
+    "text": "Tell me a christmas joke"
+   }
+  ],
+  "aliases": {
+   "programming": "Programming",
+   "code": "Programming",
+   "dark": "Dark",
+   "pun": "Pun",
+   "puns": "Pun",
+   "misc": "Misc",
+   "random": "Misc",
+   "christmas": "Christmas",
+   "xmas": "Christmas"
+  }
+ }
+}

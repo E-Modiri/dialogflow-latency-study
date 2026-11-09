@@ -1,0 +1,9 @@
+run,vm_location,comparison,n_pairs,mean_diff_ms,ci_lo,ci_hi
+Run 1,"Groningen, NL",A-B,271,280.5,268.8,292.8
+Run 1,"Groningen, NL",A-C,271,227.3,215.5,239.9
+Run 1,"Groningen, NL",C-L,271,48.3,46.8,49.8
+Run 1,"Groningen, NL",L-B,271,4.9,3.6,6.2
+Run 2 (replication),"Salt Lake City, US",A-B,276,292.2,280.9,304.4
+Run 2 (replication),"Salt Lake City, US",A-C,276,230.9,219.5,243.4
+Run 2 (replication),"Salt Lake City, US",C-L,276,58.2,56.2,59.9
+Run 2 (replication),"Salt Lake City, US",L-B,276,3.2,1.1,5.2

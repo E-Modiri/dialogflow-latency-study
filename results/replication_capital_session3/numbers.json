@@ -1,0 +1,2960 @@
+{
+ "source_logs": [
+  "data/raw/session3_2026-11-07_currency_capital-replication_US/attempts.csv"
+ ],
+ "excluded_rules": [
+  "*:currency:*"
+ ],
+ "attempt_rows": 6285,
+ "logical_requests": 6173,
+ "excluded_warmup_requests": 30,
+ "sequential": {
+  "capital": {
+   "common_cells": 276,
+   "cells_total": 400,
+   "queries": 80,
+   "blocks": 5,
+   "by_arch": {
+    "A": {
+     "n": 276,
+     "mean": 459.5059217571875,
+     "sd": 77.53501862541027,
+     "median": 448.24863850044494,
+     "p90": 561.4596414998232,
+     "p95": 591.5633772492583
+    },
+    "B": {
+     "n": 276,
+     "mean": 167.2772491593882,
+     "sd": 7.142221568361841,
+     "median": 166.04808699958085,
+     "p90": 169.67358150031941,
+     "p95": 171.3408610003171
+    },
+    "C": {
+     "n": 276,
+     "mean": 228.61096652538265,
+     "sd": 6.238536040215985,
+     "median": 227.3267439995834,
+     "p90": 233.13357449842442,
+     "p95": 236.70719399888185
+    },
+    "L": {
+     "n": 276,
+     "mean": 170.4502029926938,
+     "sd": 10.25361601441956,
+     "median": 168.403727499026,
+     "p90": 172.19498649865272,
+     "p95": 174.54816099871096
+    }
+   },
+   "comparisons": {
+    "A-B": {
+     "domain": "capital",
+     "comparison": "end-to-end overhead (A-B)",
+     "a": "A",
+     "b": "B",
+     "n_pairs": 276,
+     "n_queries": 78,
+     "mean_diff_ms": 292.2286725977993,
+     "ci_lo": 280.9072296645282,
+     "ci_hi": 304.3611547471151,
+     "median_diff_ms": 282.1580870004254,
+     "pct_of_b": 174.6972012430409,
+     "pct_ci_lo": 167.69408068533278,
+     "pct_ci_hi": 182.07364454206055,
+     "wilcoxon_W_plus": 3081.0,
+     "wilcoxon_W_minus": 0.0,
+     "wilcoxon_p": 1.682175044870657e-14,
+     "wilcoxon_method": "approx",
+     "min_attainable_p": 6.617444900424222e-24,
+     "r_rb": 1.0,
+     "mm_ratio": 2.713274563117299,
+     "mm_ratio_lo": 2.66388298835304,
+     "mm_ratio_hi": 2.7635819167158235,
+     "mm_p": 0.0,
+     "mm_converged": true,
+     "lag1_autocorr": 0.21119932272745512,
+     "mbb_ci_lo": 275.59158537724215,
+     "mbb_ci_hi": 302.86601467906763
+    },
+    "A-C": {
+     "domain": "capital",
+     "comparison": "Dialogflow + Google network legs (A-C)",
+     "a": "A",
+     "b": "C",
+     "n_pairs": 276,
+     "n_queries": 78,
+     "mean_diff_ms": 230.89495523180486,
+     "ci_lo": 219.459577779429,
+     "ci_hi": 243.42390832919537,
+     "median_diff_ms": 220.95298349995574,
+     "pct_of_b": 100.99907224099357,
+     "pct_ci_lo": 95.9454728747825,
+     "pct_ci_hi": 106.58527865785314,
+     "wilcoxon_W_plus": 3081.0,
+     "wilcoxon_W_minus": 0.0,
+     "wilcoxon_p": 1.682175044870657e-14,
+     "wilcoxon_method": "approx",
+     "min_attainable_p": 6.617444900424222e-24,
+     "r_rb": 1.0,
+     "mm_ratio": 1.9845168259073354,
+     "mm_ratio_lo": 1.9481027284141077,
+     "mm_ratio_hi": 2.021611578725822,
+     "mm_p": 0.0,
+     "mm_converged": true,
+     "lag1_autocorr": 0.2244300104358009,
+     "mbb_ci_lo": 214.58144102977045,
+     "mbb_ci_hi": 241.00166290260094
+    },
+    "C-L": {
+     "domain": "capital",
+     "comparison": "ngrok tunnel (C-L)",
+     "a": "C",
+     "b": "L",
+     "n_pairs": 276,
+     "n_queries": 78,
+     "mean_diff_ms": 58.160763532688854,
+     "ci_lo": 56.242796525155136,
+     "ci_hi": 59.85742369313208,
+     "median_diff_ms": 58.892022498184815,
+     "pct_of_b": 34.12185055313889,
+     "pct_ci_lo": 32.69952084065463,
+     "pct_ci_hi": 35.32809104333589,
+     "wilcoxon_W_plus": 3081.0,
+     "wilcoxon_W_minus": 0.0,
+     "wilcoxon_p": 1.682175044870657e-14,
+     "wilcoxon_method": "approx",
+     "min_attainable_p": 6.617444900424222e-24,
+     "r_rb": 1.0,
+     "mm_ratio": 1.3427429447443384,
+     "mm_ratio_lo": 1.3337179634206613,
+     "mm_ratio_hi": 1.351828996166887,
+     "mm_p": 0.0,
+     "mm_converged": true,
+     "lag1_autocorr": 0.01175653878541341,
+     "mbb_ci_lo": 56.7272231699001,
+     "mbb_ci_hi": 59.57106449421987
+    },
+    "L-B": {
+     "domain": "capital",
+     "comparison": "webhook handling (L-B)",
+     "a": "L",
+     "b": "B",
+     "n_pairs": 276,
+     "n_queries": 78,
+     "mean_diff_ms": 3.1729538333056033,
+     "ci_lo": 1.0682985896376944,
+     "ci_hi": 5.152033160088141,
+     "median_diff_ms": 2.2199159975571234,
+     "pct_of_b": 1.8968232974002885,
+     "pct_ci_lo": 0.6357026827856166,
+     "pct_ci_hi": 3.0917271980891003,
+     "wilcoxon_W_plus": 2818.0,
+     "wilcoxon_W_minus": 263.0,
+     "wilcoxon_p": 1.9796526533089304e-10,
+     "wilcoxon_method": "approx",
+     "min_attainable_p": 6.617444900424222e-24,
+     "r_rb": 0.8292762090230444,
+     "mm_ratio": 1.018230446178692,
+     "mm_ratio_lo": 1.0107054905653934,
+     "mm_ratio_hi": 1.0258114269719372,
+     "mm_p": 1.8093373268806926e-06,
+     "mm_converged": false,
+     "lag1_autocorr": 0.024085973573469557,
+     "mbb_ci_lo": 1.8410267373834708,
+     "mbb_ci_hi": 4.774659918074499
+    }
+   },
+   "stages": {
+    "domain": "capital",
+    "A_total_median": 448.24863850044494,
+    "A_webhook_handler_median": 165.8825,
+    "A_external_api_median": 165.808,
+    "A_outside_webhook_median": 281.84523350008726,
+    "B_total_median": 166.04808699958085,
+    "C_total_median": 227.3267439995834,
+    "C_webhook_handler_median": 165.918,
+    "C_external_api_median": 165.844,
+    "C_outside_webhook_median": 61.060458500505646,
+    "L_total_median": 168.403727499026,
+    "L_webhook_handler_median": 165.7455,
+    "L_external_api_median": 165.68200000000002,
+    "L_outside_webhook_median": 2.624667499045728,
+    "B_external_api_median": 166.04808699958085
+   }
+  }
+ },
+ "burst": [
+  {
+   "domain": "capital",
+   "arch": "A",
+   "batch_size": 10,
+   "runs": 5,
+   "requests": 50,
+   "first_attempt_success": 48,
+   "eventual_success": 48,
+   "retries": 0,
+   "mean_ms": 608.6444128123,
+   "mean_ci_lo": 494.4808898712,
+   "mean_ci_hi": 719.0171862173,
+   "between_run_sd": 90.4174948581,
+   "median_ms": 570.602931999,
+   "p90_pooled_ms": 687.5203403997,
+   "p95_pooled_ms": 1037.8757850998,
+   "run_mean_trend_spearman": 0.5,
+   "exceed_600_n": 22,
+   "exceed_600_pct": 44.0,
+   "exceed_600_ci_lo": 31.1621991203,
+   "exceed_600_ci_hi": 57.6939720819,
+   "exceed_1000_n": 5,
+   "exceed_1000_pct": 10.0,
+   "exceed_1000_ci_lo": 4.3475764657,
+   "exceed_1000_ci_hi": 21.3602315486,
+   "runs_paired": 5,
+   "overhead_ms": 404.7956556794,
+   "overhead_ci_lo": 288.3481475862,
+   "overhead_ci_hi": 521.2431637725,
+   "overhead_pct": 200.4401466017
+  },
+  {
+   "domain": "capital",
+   "arch": "A",
+   "batch_size": 20,
+   "runs": 5,
+   "requests": 100,
+   "first_attempt_success": 97,
+   "eventual_success": 97,
+   "retries": 0,
+   "mean_ms": 579.2873286391,
+   "mean_ci_lo": 515.008382921,
+   "mean_ci_hi": 647.2656938248,
+   "between_run_sd": 53.258092002,
+   "median_ms": 585.6842309986,
+   "p90_pooled_ms": 663.7356189996,
+   "p95_pooled_ms": 680.5563802016,
+   "run_mean_trend_spearman": -0.7,
+   "exceed_600_n": 37,
+   "exceed_600_pct": 37.0,
+   "exceed_600_ci_lo": 28.1823604708,
+   "exceed_600_ci_hi": 46.7794704972,
+   "exceed_1000_n": 3,
+   "exceed_1000_pct": 3.0,
+   "exceed_1000_ci_lo": 1.0254523944,
+   "exceed_1000_ci_hi": 8.4519364899,
+   "runs_paired": 5,
+   "overhead_ms": 374.6028293134,
+   "overhead_ci_lo": 263.2556556649,
+   "overhead_ci_hi": 485.9500029619,
+   "overhead_pct": 181.375681549
+  },
+  {
+   "domain": "capital",
+   "arch": "A",
+   "batch_size": 40,
+   "runs": 5,
+   "requests": 200,
+   "first_attempt_success": 195,
+   "eventual_success": 195,
+   "retries": 0,
+   "mean_ms": 567.0259242923,
+   "mean_ci_lo": 495.1483568704,
+   "mean_ci_hi": 638.9034917142,
+   "between_run_sd": 57.8880981698,
+   "median_ms": 563.1380219966,
+   "p90_pooled_ms": 644.8575319999,
+   "p95_pooled_ms": 666.8705233009,
+   "run_mean_trend_spearman": 0.0,
+   "exceed_600_n": 55,
+   "exceed_600_pct": 27.5,
+   "exceed_600_ci_lo": 21.7797002881,
+   "exceed_600_ci_hi": 34.068339412,
+   "exceed_1000_n": 6,
+   "exceed_1000_pct": 3.0,
+   "exceed_1000_ci_lo": 1.3820314259,
+   "exceed_1000_ci_hi": 6.389429281,
+   "runs_paired": 5,
+   "overhead_ms": 336.0719848133,
+   "overhead_ci_lo": 212.4232713828,
+   "overhead_ci_hi": 459.7206982438,
+   "overhead_pct": 145.5147227935
+  },
+  {
+   "domain": "capital",
+   "arch": "A",
+   "batch_size": 60,
+   "runs": 5,
+   "requests": 300,
+   "first_attempt_success": 296,
+   "eventual_success": 296,
+   "retries": 0,
+   "mean_ms": 558.5722056926,
+   "mean_ci_lo": 521.6064922703,
+   "mean_ci_hi": 595.7164161964,
+   "between_run_sd": 29.8429865218,
+   "median_ms": 559.883848,
+   "p90_pooled_ms": 626.5517699994,
+   "p95_pooled_ms": 641.1390242474,
+   "run_mean_trend_spearman": 0.3,
+   "exceed_600_n": 68,
+   "exceed_600_pct": 22.6666666667,
+   "exceed_600_ci_lo": 18.2919503488,
+   "exceed_600_ci_hi": 27.732532089,
+   "exceed_1000_n": 4,
+   "exceed_1000_pct": 1.3333333333,
+   "exceed_1000_ci_lo": 0.5196961703,
+   "exceed_1000_ci_hi": 3.377553048,
+   "runs_paired": 5,
+   "overhead_ms": 311.4422915419,
+   "overhead_ci_lo": 238.5604007947,
+   "overhead_ci_hi": 384.324182289,
+   "overhead_pct": 125.9782163127
+  },
+  {
+   "domain": "capital",
+   "arch": "A",
+   "batch_size": 80,
+   "runs": 5,
+   "requests": 400,
+   "first_attempt_success": 395,
+   "eventual_success": 395,
+   "retries": 0,
+   "mean_ms": 627.2524752785,
+   "mean_ci_lo": 563.7445633481,
+   "mean_ci_hi": 690.760387209,
+   "between_run_sd": 51.1474215426,
+   "median_ms": 625.1925500001,
+   "p90_pooled_ms": 725.2215314016,
+   "p95_pooled_ms": 746.2281262986,
+   "run_mean_trend_spearman": -0.4,
+   "exceed_600_n": 248,
+   "exceed_600_pct": 62.0,
+   "exceed_600_ci_lo": 57.150454335,
+   "exceed_600_ci_hi": 66.6212505974,
+   "exceed_1000_n": 5,
+   "exceed_1000_pct": 1.25,
+   "exceed_1000_ci_lo": 0.5350750746,
+   "exceed_1000_ci_hi": 2.8923736375,
+   "runs_paired": 5,
+   "overhead_ms": 335.4992081722,
+   "overhead_ci_lo": 107.8553999995,
+   "overhead_ci_hi": 563.1430163449,
+   "overhead_pct": 114.9941563636
+  },
+  {
+   "domain": "capital",
+   "arch": "A",
+   "batch_size": 90,
+   "runs": 5,
+   "requests": 450,
+   "first_attempt_success": 444,
+   "eventual_success": 444,
+   "retries": 0,
+   "mean_ms": 679.9914493154,
+   "mean_ci_lo": 637.6713889807,
+   "mean_ci_hi": 722.4165455198,
+   "between_run_sd": 34.1256397309,
+   "median_ms": 687.4613169985,
+   "p90_pooled_ms": 757.3883700003,
+   "p95_pooled_ms": 772.0865454998,
+   "run_mean_trend_spearman": 0.8,
+   "exceed_600_n": 404,
+   "exceed_600_pct": 89.7777777778,
+   "exceed_600_ci_lo": 86.6337193727,
+   "exceed_600_ci_hi": 92.2484525828,
+   "exceed_1000_n": 6,
+   "exceed_1000_pct": 1.3333333333,
+   "exceed_1000_ci_lo": 0.6124728685,
+   "exceed_1000_ci_hi": 2.8780541804,
+   "runs_paired": 5,
+   "overhead_ms": 451.3607479895,
+   "overhead_ci_lo": 378.0583963648,
+   "overhead_ci_hi": 524.6630996141,
+   "overhead_pct": 197.3737948278
+  },
+  {
+   "domain": "capital",
+   "arch": "B",
+   "batch_size": 10,
+   "runs": 5,
+   "requests": 50,
+   "first_attempt_success": 49,
+   "eventual_success": 49,
+   "retries": 0,
+   "mean_ms": 202.4989081025,
+   "mean_ci_lo": 158.8797060618,
+   "mean_ci_hi": 245.027058668,
+   "between_run_sd": 34.690283656,
+   "median_ms": 180.7700110003,
+   "p90_pooled_ms": 253.5826769999,
+   "p95_pooled_ms": 255.1955365991,
+   "run_mean_trend_spearman": 0.3,
+   "exceed_600_n": 1,
+   "exceed_600_pct": 2.0,
+   "exceed_600_ci_lo": 0.3539259233,
+   "exceed_600_ci_hi": 10.4954436939,
+   "exceed_1000_n": 1,
+   "exceed_1000_pct": 2.0,
+   "exceed_1000_ci_lo": 0.3539259233,
+   "exceed_1000_ci_hi": 10.4954436939,
+   "runs_paired": 5,
+   "overhead_ms": 404.7956556794,
+   "overhead_ci_lo": 288.3481475862,
+   "overhead_ci_hi": 521.2431637725,
+   "overhead_pct": 200.4401466017
+  },
+  {
+   "domain": "capital",
+   "arch": "B",
+   "batch_size": 20,
+   "runs": 5,
+   "requests": 100,
+   "first_attempt_success": 98,
+   "eventual_success": 98,
+   "retries": 0,
+   "mean_ms": 207.131091347,
+   "mean_ci_lo": 157.7199531963,
+   "mean_ci_hi": 255.3484649227,
+   "between_run_sd": 39.3135791437,
+   "median_ms": 187.5537515007,
+   "p90_pooled_ms": 258.0334900016,
+   "p95_pooled_ms": 261.6316030028,
+   "run_mean_trend_spearman": 0.6,
+   "exceed_600_n": 2,
+   "exceed_600_pct": 2.0,
+   "exceed_600_ci_lo": 0.5501967501,
+   "exceed_600_ci_hi": 7.0011791318,
+   "exceed_1000_n": 2,
+   "exceed_1000_pct": 2.0,
+   "exceed_1000_ci_lo": 0.5501967501,
+   "exceed_1000_ci_hi": 7.0011791318,
+   "runs_paired": 5,
+   "overhead_ms": 374.6028293134,
+   "overhead_ci_lo": 263.2556556649,
+   "overhead_ci_hi": 485.9500029619,
+   "overhead_pct": 181.375681549
+  },
+  {
+   "domain": "capital",
+   "arch": "B",
+   "batch_size": 40,
+   "runs": 5,
+   "requests": 200,
+   "first_attempt_success": 196,
+   "eventual_success": 196,
+   "retries": 0,
+   "mean_ms": 231.1842410816,
+   "mean_ci_lo": 175.1549911309,
+   "mean_ci_hi": 286.752887827,
+   "between_run_sd": 44.9388469254,
+   "median_ms": 237.7535340001,
+   "p90_pooled_ms": 286.8666010017,
+   "p95_pooled_ms": 299.8002349987,
+   "run_mean_trend_spearman": -0.7,
+   "exceed_600_n": 4,
+   "exceed_600_pct": 2.0,
+   "exceed_600_ci_lo": 0.7804426362,
+   "exceed_600_ci_hi": 5.028708724,
+   "exceed_1000_n": 4,
+   "exceed_1000_pct": 2.0,
+   "exceed_1000_ci_lo": 0.7804426362,
+   "exceed_1000_ci_hi": 5.028708724,
+   "runs_paired": 5,
+   "overhead_ms": 336.0719848133,
+   "overhead_ci_lo": 212.4232713828,
+   "overhead_ci_hi": 459.7206982438,
+   "overhead_pct": 145.5147227935
+  },
+  {
+   "domain": "capital",
+   "arch": "B",
+   "batch_size": 60,
+   "runs": 5,
+   "requests": 300,
+   "first_attempt_success": 295,
+   "eventual_success": 295,
+   "retries": 0,
+   "mean_ms": 247.2191626915,
+   "mean_ci_lo": 207.6267495041,
+   "mean_ci_hi": 286.8115758788,
+   "between_run_sd": 31.8865757923,
+   "median_ms": 252.177888,
+   "p90_pooled_ms": 287.8454359998,
+   "p95_pooled_ms": 294.6946157001,
+   "run_mean_trend_spearman": -0.7,
+   "exceed_600_n": 5,
+   "exceed_600_pct": 1.6666666667,
+   "exceed_600_ci_lo": 0.7139477305,
+   "exceed_600_ci_hi": 3.8415395069,
+   "exceed_1000_n": 5,
+   "exceed_1000_pct": 1.6666666667,
+   "exceed_1000_ci_lo": 0.7139477305,
+   "exceed_1000_ci_hi": 3.8415395069,
+   "runs_paired": 5,
+   "overhead_ms": 311.4422915419,
+   "overhead_ci_lo": 238.5604007947,
+   "overhead_ci_hi": 384.324182289,
+   "overhead_pct": 125.9782163127
+  },
+  {
+   "domain": "capital",
+   "arch": "B",
+   "batch_size": 80,
+   "runs": 5,
+   "requests": 400,
+   "first_attempt_success": 395,
+   "eventual_success": 395,
+   "retries": 0,
+   "mean_ms": 291.7532671064,
+   "mean_ci_lo": 112.6771523221,
+   "mean_ci_hi": 470.8293818907,
+   "between_run_sd": 144.2226842716,
+   "median_ms": 249.220818001,
+   "p90_pooled_ms": 542.6892164018,
+   "p95_pooled_ms": 572.458571001,
+   "run_mean_trend_spearman": 0.4,
+   "exceed_600_n": 9,
+   "exceed_600_pct": 2.25,
+   "exceed_600_ci_lo": 1.1881583472,
+   "exceed_600_ci_hi": 4.2202657759,
+   "exceed_1000_n": 5,
+   "exceed_1000_pct": 1.25,
+   "exceed_1000_ci_lo": 0.5350750746,
+   "exceed_1000_ci_hi": 2.8923736375,
+   "runs_paired": 5,
+   "overhead_ms": 335.4992081722,
+   "overhead_ci_lo": 107.8553999995,
+   "overhead_ci_hi": 563.1430163449,
+   "overhead_pct": 114.9941563636
+  },
+  {
+   "domain": "capital",
+   "arch": "B",
+   "batch_size": 90,
+   "runs": 5,
+   "requests": 450,
+   "first_attempt_success": 445,
+   "eventual_success": 445,
+   "retries": 0,
+   "mean_ms": 228.6832192608,
+   "mean_ci_lo": 174.1610267616,
+   "mean_ci_hi": 283.2054117601,
+   "between_run_sd": 43.9105849716,
+   "median_ms": 224.1934690028,
+   "p90_pooled_ms": 291.9422184008,
+   "p95_pooled_ms": 308.5656471994,
+   "run_mean_trend_spearman": 0.0,
+   "exceed_600_n": 5,
+   "exceed_600_pct": 1.1111111111,
+   "exceed_600_ci_lo": 0.4755082443,
+   "exceed_600_ci_hi": 2.5743362796,
+   "exceed_1000_n": 5,
+   "exceed_1000_pct": 1.1111111111,
+   "exceed_1000_ci_lo": 0.4755082443,
+   "exceed_1000_ci_hi": 2.5743362796,
+   "runs_paired": 5,
+   "overhead_ms": 451.3607479895,
+   "overhead_ci_lo": 378.0583963648,
+   "overhead_ci_hi": 524.6630996141,
+   "overhead_pct": 197.3737948278
+  }
+ ],
+ "sustained": [
+  {
+   "domain": "capital",
+   "arch": "A",
+   "offered_rps": 0.5,
+   "requests": 58,
+   "duration_s": 117.72,
+   "achieved_rps": 0.4841997961,
+   "first_attempt_error_pct": 1.724137931,
+   "eventual_error_pct": 1.724137931,
+   "p50_ms": 414.7611890003,
+   "p90_ms": 497.3055560004,
+   "p95_ms": 520.6523968009,
+   "generator_lag_p95_ms": 0.3
+  },
+  {
+   "domain": "capital",
+   "arch": "A",
+   "offered_rps": 1.0,
+   "requests": 135,
+   "duration_s": 118.3395,
+   "achieved_rps": 1.1238850933,
+   "first_attempt_error_pct": 1.4814814815,
+   "eventual_error_pct": 1.4814814815,
+   "p50_ms": 399.0525709996,
+   "p90_ms": 484.6851405993,
+   "p95_ms": 512.4912916021,
+   "generator_lag_p95_ms": 0.3
+  },
+  {
+   "domain": "capital",
+   "arch": "A",
+   "offered_rps": 2.0,
+   "requests": 216,
+   "duration_s": 119.0015,
+   "achieved_rps": 1.7898934047,
+   "first_attempt_error_pct": 1.3888888889,
+   "eventual_error_pct": 1.3888888889,
+   "p50_ms": 396.879502001,
+   "p90_ms": 461.1103309988,
+   "p95_ms": 497.4715306002,
+   "generator_lag_p95_ms": 0.3
+  },
+  {
+   "domain": "capital",
+   "arch": "A",
+   "offered_rps": 3.0,
+   "requests": 357,
+   "duration_s": 119.7511,
+   "achieved_rps": 2.9394302015,
+   "first_attempt_error_pct": 1.4005602241,
+   "eventual_error_pct": 1.4005602241,
+   "p50_ms": 379.7787820004,
+   "p90_ms": 433.9800062007,
+   "p95_ms": 470.1059290508,
+   "generator_lag_p95_ms": 0.3
+  },
+  {
+   "domain": "capital",
+   "arch": "B",
+   "offered_rps": 0.5,
+   "requests": 66,
+   "duration_s": 113.2728,
+   "achieved_rps": 0.5738359076,
+   "first_attempt_error_pct": 1.5151515152,
+   "eventual_error_pct": 1.5151515152,
+   "p50_ms": 165.152911999,
+   "p90_ms": 170.5380349995,
+   "p95_ms": 174.177372799,
+   "generator_lag_p95_ms": 0.3
+  },
+  {
+   "domain": "capital",
+   "arch": "B",
+   "offered_rps": 1.0,
+   "requests": 146,
+   "duration_s": 116.9577,
+   "achieved_rps": 1.2312143621,
+   "first_attempt_error_pct": 1.3698630137,
+   "eventual_error_pct": 1.3698630137,
+   "p50_ms": 164.9550325001,
+   "p90_ms": 171.9575809992,
+   "p95_ms": 174.299679501,
+   "generator_lag_p95_ms": 0.3
+  },
+  {
+   "domain": "capital",
+   "arch": "B",
+   "offered_rps": 2.0,
+   "requests": 206,
+   "duration_s": 116.8966,
+   "achieved_rps": 1.7365774539,
+   "first_attempt_error_pct": 1.4563106796,
+   "eventual_error_pct": 1.4563106796,
+   "p50_ms": 161.7241410022,
+   "p90_ms": 166.4611978005,
+   "p95_ms": 168.3366762001,
+   "generator_lag_p95_ms": 0.3
+  },
+  {
+   "domain": "capital",
+   "arch": "B",
+   "offered_rps": 3.0,
+   "requests": 359,
+   "duration_s": 119.4844,
+   "achieved_rps": 2.9627298626,
+   "first_attempt_error_pct": 1.3927576602,
+   "eventual_error_pct": 1.3927576602,
+   "p50_ms": 164.6380025013,
+   "p90_ms": 171.1809049993,
+   "p95_ms": 172.7740724988,
+   "generator_lag_p95_ms": 0.3
+  }
+ ],
+ "accounting": [
+  {
+   "experiment": "burst",
+   "domain": "capital",
+   "arch": "A",
+   "logical_requests": 1500,
+   "attempts": 1500,
+   "retries": 0,
+   "first_attempt_success": 1475,
+   "eventual_success": 1475,
+   "success_after_retry": 0,
+   "entity_mismatch_but_api_ok": 22,
+   "first_fail_api": 25,
+   "in_common_paired_set": 0.0,
+   "excluded_from_paired_set": 0.0,
+   "first_fail_quota": 0.0
+  },
+  {
+   "experiment": "burst",
+   "domain": "capital",
+   "arch": "B",
+   "logical_requests": 1500,
+   "attempts": 1500,
+   "retries": 0,
+   "first_attempt_success": 1478,
+   "eventual_success": 1478,
+   "success_after_retry": 0,
+   "entity_mismatch_but_api_ok": 0,
+   "first_fail_api": 22,
+   "in_common_paired_set": 0.0,
+   "excluded_from_paired_set": 0.0,
+   "first_fail_quota": 0.0
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "logical_requests": 400,
+   "attempts": 400,
+   "retries": 0,
+   "first_attempt_success": 284,
+   "eventual_success": 284,
+   "success_after_retry": 0,
+   "entity_mismatch_but_api_ok": 3,
+   "first_fail_api": 116,
+   "in_common_paired_set": 276.0,
+   "excluded_from_paired_set": 124.0,
+   "first_fail_quota": 0.0
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "logical_requests": 400,
+   "attempts": 512,
+   "retries": 112,
+   "first_attempt_success": 285,
+   "eventual_success": 286,
+   "success_after_retry": 1,
+   "entity_mismatch_but_api_ok": 0,
+   "first_fail_api": 3,
+   "in_common_paired_set": 276.0,
+   "excluded_from_paired_set": 124.0,
+   "first_fail_quota": 112.0
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "logical_requests": 400,
+   "attempts": 400,
+   "retries": 0,
+   "first_attempt_success": 283,
+   "eventual_success": 283,
+   "success_after_retry": 0,
+   "entity_mismatch_but_api_ok": 0,
+   "first_fail_api": 117,
+   "in_common_paired_set": 276.0,
+   "excluded_from_paired_set": 124.0,
+   "first_fail_quota": 0.0
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "logical_requests": 400,
+   "attempts": 400,
+   "retries": 0,
+   "first_attempt_success": 287,
+   "eventual_success": 287,
+   "success_after_retry": 0,
+   "entity_mismatch_but_api_ok": 0,
+   "first_fail_api": 113,
+   "in_common_paired_set": 276.0,
+   "excluded_from_paired_set": 124.0,
+   "first_fail_quota": 0.0
+  },
+  {
+   "experiment": "sustained",
+   "domain": "capital",
+   "arch": "A",
+   "logical_requests": 766,
+   "attempts": 766,
+   "retries": 0,
+   "first_attempt_success": 755,
+   "eventual_success": 755,
+   "success_after_retry": 0,
+   "entity_mismatch_but_api_ok": 11,
+   "first_fail_api": 11,
+   "in_common_paired_set": 0.0,
+   "excluded_from_paired_set": 0.0,
+   "first_fail_quota": 0.0
+  },
+  {
+   "experiment": "sustained",
+   "domain": "capital",
+   "arch": "B",
+   "logical_requests": 777,
+   "attempts": 777,
+   "retries": 0,
+   "first_attempt_success": 766,
+   "eventual_success": 766,
+   "success_after_retry": 0,
+   "entity_mismatch_but_api_ok": 0,
+   "first_fail_api": 11,
+   "in_common_paired_set": 0.0,
+   "excluded_from_paired_set": 0.0,
+   "first_fail_quota": 0.0
+  }
+ ],
+ "failures_by_query": [
+  {
+   "experiment": "burst",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Costa Rica",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "burst",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Czech Republic",
+   "first_error": "api",
+   "count": 22
+  },
+  {
+   "experiment": "burst",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Egypt",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "burst",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Guatemala",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "burst",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "UAE",
+   "first_error": "api",
+   "count": 22
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Algeria",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Angola",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Argentina",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Austria",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Bangladesh",
+   "first_error": "api",
+   "count": 3
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Belgium",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Bolivia",
+   "first_error": "api",
+   "count": 3
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Brazil",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Canada",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Colombia",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Costa Rica",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Croatia",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Cuba",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Czech Republic",
+   "first_error": "api",
+   "count": 5
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Denmark",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Ecuador",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Egypt",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Ethiopia",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Finland",
+   "first_error": "api",
+   "count": 3
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "France",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Germany",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Ghana",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Greece",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Honduras",
+   "first_error": "api",
+   "count": 3
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Iran",
+   "first_error": "api",
+   "count": 3
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Israel",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Italy",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Jamaica",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Japan",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Jordan",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Kazakhstan",
+   "first_error": "api",
+   "count": 3
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Kenya",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Libya",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Malaysia",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Mexico",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Morocco",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Nepal",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Netherlands",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Norway",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Pakistan",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Panama",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Paraguay",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Peru",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Philippines",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Poland",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Portugal",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Romania",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Rwanda",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Saudi Arabia",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Senegal",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "South Korea",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Spain",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Sudan",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Sweden",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Switzerland",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Tanzania",
+   "first_error": "api",
+   "count": 3
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Thailand",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Tunisia",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "UAE",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Uganda",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Ukraine",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Uruguay",
+   "first_error": "api",
+   "count": 3
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Uzbekistan",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Venezuela",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Vietnam",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Zimbabwe",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Algeria",
+   "first_error": "quota",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Angola",
+   "first_error": "quota",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Argentina",
+   "first_error": "quota",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Austria",
+   "first_error": "quota",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Bangladesh",
+   "first_error": "quota",
+   "count": 3
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Belgium",
+   "first_error": "quota",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Bolivia",
+   "first_error": "quota",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Brazil",
+   "first_error": "quota",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Canada",
+   "first_error": "quota",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Colombia",
+   "first_error": "quota",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Costa Rica",
+   "first_error": "quota",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Croatia",
+   "first_error": "quota",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Cuba",
+   "first_error": "quota",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Czech Republic",
+   "first_error": "quota",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Denmark",
+   "first_error": "quota",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Ecuador",
+   "first_error": "quota",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Egypt",
+   "first_error": "quota",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Ethiopia",
+   "first_error": "quota",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Finland",
+   "first_error": "quota",
+   "count": 3
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "France",
+   "first_error": "quota",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Germany",
+   "first_error": "quota",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Ghana",
+   "first_error": "quota",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Greece",
+   "first_error": "quota",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Honduras",
+   "first_error": "quota",
+   "count": 3
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Iran",
+   "first_error": "quota",
+   "count": 3
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Israel",
+   "first_error": "quota",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Italy",
+   "first_error": "quota",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Jamaica",
+   "first_error": "quota",
+   "count": 3
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Japan",
+   "first_error": "quota",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Jordan",
+   "first_error": "quota",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Kazakhstan",
+   "first_error": "quota",
+   "count": 3
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Kenya",
+   "first_error": "quota",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Libya",
+   "first_error": "quota",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Malaysia",
+   "first_error": "quota",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Mexico",
+   "first_error": "quota",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Morocco",
+   "first_error": "quota",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Nepal",
+   "first_error": "quota",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Netherlands",
+   "first_error": "quota",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Norway",
+   "first_error": "quota",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Pakistan",
+   "first_error": "quota",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Panama",
+   "first_error": "quota",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Paraguay",
+   "first_error": "quota",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Peru",
+   "first_error": "quota",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Philippines",
+   "first_error": "quota",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Poland",
+   "first_error": "quota",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Portugal",
+   "first_error": "quota",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Romania",
+   "first_error": "quota",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Rwanda",
+   "first_error": "quota",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Saudi Arabia",
+   "first_error": "quota",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Senegal",
+   "first_error": "quota",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "South Korea",
+   "first_error": "quota",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Sudan",
+   "first_error": "quota",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Sweden",
+   "first_error": "quota",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Switzerland",
+   "first_error": "quota",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Tanzania",
+   "first_error": "quota",
+   "count": 3
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Thailand",
+   "first_error": "quota",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Tunisia",
+   "first_error": "quota",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "UAE",
+   "first_error": "api",
+   "count": 3
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "UAE",
+   "first_error": "quota",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Uganda",
+   "first_error": "quota",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Ukraine",
+   "first_error": "quota",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Uruguay",
+   "first_error": "quota",
+   "count": 3
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Uzbekistan",
+   "first_error": "quota",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Venezuela",
+   "first_error": "quota",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Vietnam",
+   "first_error": "quota",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "Zimbabwe",
+   "first_error": "quota",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Algeria",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Angola",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Argentina",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Austria",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Bangladesh",
+   "first_error": "api",
+   "count": 3
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Belgium",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Bolivia",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Brazil",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Canada",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Colombia",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Costa Rica",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Croatia",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Cuba",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Czech Republic",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Denmark",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Ecuador",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Egypt",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Ethiopia",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Finland",
+   "first_error": "api",
+   "count": 3
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "France",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Germany",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Ghana",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Greece",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Honduras",
+   "first_error": "api",
+   "count": 3
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Iran",
+   "first_error": "api",
+   "count": 3
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Israel",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Italy",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Jamaica",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Japan",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Jordan",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Kazakhstan",
+   "first_error": "api",
+   "count": 3
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Kenya",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Libya",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Malaysia",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Mexico",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Morocco",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Nepal",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Netherlands",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Norway",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Pakistan",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Panama",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Paraguay",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Peru",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Philippines",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Poland",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Portugal",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Romania",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Rwanda",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Saudi Arabia",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Senegal",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "South Korea",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Sudan",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Sweden",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Switzerland",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Tanzania",
+   "first_error": "api",
+   "count": 3
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Thailand",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Tunisia",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "UAE",
+   "first_error": "api",
+   "count": 5
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Uganda",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Ukraine",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Uruguay",
+   "first_error": "api",
+   "count": 3
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Uzbekistan",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Venezuela",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Vietnam",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "C",
+   "query_label": "Zimbabwe",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Algeria",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Angola",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Argentina",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Austria",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Bangladesh",
+   "first_error": "api",
+   "count": 3
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Belgium",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Bolivia",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Brazil",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Canada",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Colombia",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Costa Rica",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Croatia",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Cuba",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Czech Republic",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Denmark",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Ecuador",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Egypt",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Ethiopia",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Finland",
+   "first_error": "api",
+   "count": 3
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "France",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Germany",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Ghana",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Greece",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Honduras",
+   "first_error": "api",
+   "count": 3
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Iran",
+   "first_error": "api",
+   "count": 3
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Israel",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Italy",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Jamaica",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Japan",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Jordan",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Kazakhstan",
+   "first_error": "api",
+   "count": 3
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Kenya",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Libya",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Malaysia",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Mexico",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Morocco",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Nepal",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Netherlands",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Norway",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Pakistan",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Panama",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Paraguay",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Peru",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Philippines",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Poland",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Portugal",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Romania",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Rwanda",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Saudi Arabia",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Senegal",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "South Korea",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Sudan",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Sweden",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Switzerland",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Tanzania",
+   "first_error": "api",
+   "count": 3
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Thailand",
+   "first_error": "api",
+   "count": 1
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Tunisia",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "UAE",
+   "first_error": "api",
+   "count": 5
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Uganda",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Ukraine",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Uruguay",
+   "first_error": "api",
+   "count": 3
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Uzbekistan",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Venezuela",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Vietnam",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sequential",
+   "domain": "capital",
+   "arch": "L",
+   "query_label": "Zimbabwe",
+   "first_error": "api",
+   "count": 2
+  },
+  {
+   "experiment": "sustained",
+   "domain": "capital",
+   "arch": "A",
+   "query_label": "Czech Republic",
+   "first_error": "api",
+   "count": 11
+  },
+  {
+   "experiment": "sustained",
+   "domain": "capital",
+   "arch": "B",
+   "query_label": "UAE",
+   "first_error": "api",
+   "count": 11
+  }
+ ]
+}
