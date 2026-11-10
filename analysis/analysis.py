@@ -299,7 +299,9 @@ def burst_tables(req: pd.DataFrame, out: Dict) -> pd.DataFrame:
              "requests": len(g), "first_attempt_success": int(g["first_success"].sum()),
              "eventual_success": int(g["eventual_success"].sum()),
              "retries": int((g["n_attempts"] - 1).sum()),
-             "mean_ms": lat.mean() if len(lat) else math.nan,
+             # mean of the run means, so that the mean, its t-interval and A-B are consistent
+             "mean_ms": run_means.mean() if k else math.nan,
+             "mean_pooled_ms": lat.mean() if len(lat) else math.nan,
              "mean_ci_lo": run_means.mean() - t * sem, "mean_ci_hi": run_means.mean() + t * sem,
              "between_run_sd": run_means.std(ddof=1) if k > 1 else math.nan,
              "median_ms": np.median(lat) if len(lat) else math.nan,
@@ -444,9 +446,11 @@ def figures(req: pd.DataFrame, burst: pd.DataFrame, stages: pd.DataFrame, sus: p
     # Fig: burst
     if len(burst):
         bd = [d for d in DOMAIN_ORDER if d in burst["domain"].unique()]
-        fig, axes = plt.subplots(1, len(bd), figsize=(3.6 * len(bd), 3.4), squeeze=False,
+        ncol = 2 if len(bd) > 2 else len(bd)
+        nrow = math.ceil(len(bd) / ncol)
+        fig, axes = plt.subplots(nrow, ncol, figsize=(4.6 * ncol, 3.6 * nrow + 0.6), squeeze=False,
                                  sharey=True)
-        for ax, dom in zip(axes[0], bd):
+        for ax, dom in zip(axes.flat, bd):
             for a in sorted(burst["arch"].unique()):
                 g = burst[(burst["domain"] == dom) & (burst["arch"] == a)].sort_values("batch_size")
                 if g.empty:
@@ -457,12 +461,14 @@ def figures(req: pd.DataFrame, burst: pd.DataFrame, stages: pd.DataFrame, sus: p
                 ax.plot(g["batch_size"], g["p90_pooled_ms"], color=col[a], ls="--", marker="x",
                         label=f"{a} pooled P90")
             ax.axhline(1000, color="#DC2626", lw=1, ls=":")
-            ax.set_title(DOMAIN_NAME[dom], fontsize=10)
-            ax.set_xlabel("burst size (simultaneous requests)")
-        axes[0, 0].set_ylabel("latency (ms)")
+            ax.set_title(DOMAIN_NAME[dom], fontsize=12)
+            ax.set_xlabel("burst size (simultaneous requests)", fontsize=10)
+            ax.tick_params(labelsize=10)
+        for r in range(nrow):
+            axes[r, 0].set_ylabel("latency (ms)", fontsize=10)
         h, l = axes[0, 0].get_legend_handles_labels()
-        fig.legend(h, l, loc="lower center", ncol=4, fontsize=8, frameon=False)
-        fig.tight_layout(rect=(0, 0.08, 1, 1))
+        fig.legend(h, l, loc="lower center", ncol=4, fontsize=10, frameon=False)
+        fig.tight_layout(rect=(0, 0.07, 1, 1))
         fig.savefig(os.path.join(fig_dir, "fig_burst.png"), dpi=200)
         plt.close(fig)
 
