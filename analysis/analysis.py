@@ -371,6 +371,16 @@ def figures(req: pd.DataFrame, burst: pd.DataFrame, stages: pd.DataFrame, sus: p
     import matplotlib.pyplot as plt
     from scipy.stats import gaussian_kde
 
+    # Journal artwork rules: sans-serif (Arial/Helvetica) lettering of 8-12 pt at printed size,
+    # at least 600 dpi. Figures are drawn at their printed width (at most 6.25 in, the A4 text width).
+    plt.rcParams.update({
+        "font.family": "sans-serif",
+        "font.sans-serif": ["Arial", "Helvetica", "Liberation Sans", "DejaVu Sans"],
+        "font.size": 9, "axes.titlesize": 9.5, "axes.labelsize": 9,
+        "xtick.labelsize": 8, "ytick.labelsize": 8, "legend.fontsize": 8,
+        "savefig.dpi": 600,
+    })
+
     col = {"A": "#4F46E5", "B": "#059669", "C": "#D97706", "L": "#6B7280"}
     seq = req[(req["experiment"] == "sequential") & (req["phase"] == "measure")
               & req["first_success"]]
@@ -378,7 +388,7 @@ def figures(req: pd.DataFrame, burst: pd.DataFrame, stages: pd.DataFrame, sus: p
 
     # Fig: raw single-request distributions (log x so outliers stay visible)
     if doms:
-        fig, axes = plt.subplots(len(doms), 1, figsize=(8, 2.6 * len(doms)), squeeze=False)
+        fig, axes = plt.subplots(len(doms), 1, figsize=(6.25, 2.0 * len(doms)), squeeze=False)
         for ax, dom in zip(axes[:, 0], doms):
             s = seq[seq["domain"] == dom]
             lo, hi = s["first_latency_ms"].min() * 0.8, s["first_latency_ms"].max() * 1.2
@@ -392,17 +402,17 @@ def figures(req: pd.DataFrame, burst: pd.DataFrame, stages: pd.DataFrame, sus: p
                         color=col[a], label=f"{ARCH_NAME[a]} (n={len(v)})")
             ax.set_ylabel("% of requests per bin")
             ax.set_xscale("log")
-            ax.set_title(f"{DOMAIN_NAME[dom]}: raw first-attempt latencies (successful)", fontsize=10)
+            ax.set_title(DOMAIN_NAME[dom])
             ax.set_xlabel("latency (ms, log scale)")
-            ax.legend(fontsize=7)
+            ax.legend()
         fig.tight_layout()
-        fig.savefig(os.path.join(fig_dir, "fig_single_distributions.png"), dpi=200)
+        fig.savefig(os.path.join(fig_dir, "fig_single_distributions.png"))
         plt.close(fig)
 
     # Fig: Joke category-level summary, shown separately from raw distribution
     if "joke" in doms:
         s = seq[seq["domain"] == "joke"]
-        fig, ax = plt.subplots(figsize=(7, 3.2))
+        fig, ax = plt.subplots(figsize=(6.0, 3.0))
         cats = sorted(s["query_label"].unique())
         for j, a in enumerate(sorted(s["arch"].unique())):
             for i, c in enumerate(cats):
@@ -415,15 +425,14 @@ def figures(req: pd.DataFrame, burst: pd.DataFrame, stages: pd.DataFrame, sus: p
         ax.set_xticks(range(len(cats)), cats)
         ax.set_yscale("log")
         ax.set_ylabel("latency (ms)")
-        ax.set_title("Joke: raw observations (dots) and per-category means (outlined)", fontsize=10)
-        ax.legend(fontsize=7)
+        ax.legend()
         fig.tight_layout()
-        fig.savefig(os.path.join(fig_dir, "fig_joke_categories.png"), dpi=200)
+        fig.savefig(os.path.join(fig_dir, "fig_joke_categories.png"))
         plt.close(fig)
 
     # Fig: stage decomposition
     if len(stages) and "A_webhook_handler_median" in stages:
-        fig, ax = plt.subplots(figsize=(7, 3.2))
+        fig, ax = plt.subplots(figsize=(6.0, 3.4))
         x = np.arange(len(stages))
         api = stages["A_external_api_median"].to_numpy()
         handler_rest = (stages["A_webhook_handler_median"] - stages["A_external_api_median"]).to_numpy()
@@ -437,10 +446,9 @@ def figures(req: pd.DataFrame, burst: pd.DataFrame, stages: pd.DataFrame, sus: p
                        s=400, color="#D97706", label="control C: tunnel-only network share")
         ax.set_xticks(x, [DOMAIN_NAME[d] for d in stages["domain"]])
         ax.set_ylabel("median latency (ms)")
-        ax.set_title("Architecture A latency by stage (medians, common set)", fontsize=10)
-        ax.legend(fontsize=7, loc="upper center", bbox_to_anchor=(0.5, -0.12), ncol=2)
+        ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.12), ncol=2)
         fig.tight_layout()
-        fig.savefig(os.path.join(fig_dir, "fig_stage_decomposition.png"), dpi=200)
+        fig.savefig(os.path.join(fig_dir, "fig_stage_decomposition.png"))
         plt.close(fig)
 
     # Fig: burst
@@ -448,7 +456,7 @@ def figures(req: pd.DataFrame, burst: pd.DataFrame, stages: pd.DataFrame, sus: p
         bd = [d for d in DOMAIN_ORDER if d in burst["domain"].unique()]
         ncol = 2 if len(bd) > 2 else len(bd)
         nrow = math.ceil(len(bd) / ncol)
-        fig, axes = plt.subplots(nrow, ncol, figsize=(4.6 * ncol, 3.6 * nrow + 0.6), squeeze=False,
+        fig, axes = plt.subplots(nrow, ncol, figsize=(6.25, 2.6 * nrow + 0.5), squeeze=False,
                                  sharey=True)
         for ax, dom in zip(axes.flat, bd):
             for a in sorted(burst["arch"].unique()):
@@ -461,33 +469,36 @@ def figures(req: pd.DataFrame, burst: pd.DataFrame, stages: pd.DataFrame, sus: p
                 ax.plot(g["batch_size"], g["p90_pooled_ms"], color=col[a], ls="--", marker="x",
                         label=f"{a} pooled P90")
             ax.axhline(1000, color="#DC2626", lw=1, ls=":")
-            ax.set_title(DOMAIN_NAME[dom], fontsize=12)
-            ax.set_xlabel("burst size (simultaneous requests)", fontsize=10)
-            ax.tick_params(labelsize=10)
+            ax.set_title(DOMAIN_NAME[dom])
+            ax.set_xlabel("burst size (simultaneous requests)")
         for r in range(nrow):
-            axes[r, 0].set_ylabel("latency (ms)", fontsize=10)
+            axes[r, 0].set_ylabel("latency (ms)")
         h, l = axes[0, 0].get_legend_handles_labels()
-        fig.legend(h, l, loc="lower center", ncol=4, fontsize=10, frameon=False)
-        fig.tight_layout(rect=(0, 0.07, 1, 1))
-        fig.savefig(os.path.join(fig_dir, "fig_burst.png"), dpi=200)
+        fig.legend(h, l, loc="lower center", ncol=4, frameon=False)
+        fig.tight_layout(rect=(0, 0.08, 1, 1))
+        fig.savefig(os.path.join(fig_dir, "fig_burst.png"))
         plt.close(fig)
 
     # Fig: sustained
     if len(sus):
         sd = [d for d in DOMAIN_ORDER if d in sus["domain"].unique()]
-        fig, axes = plt.subplots(1, len(sd), figsize=(3.6 * len(sd), 3.2), squeeze=False)
-        for ax, dom in zip(axes[0], sd):
+        ncol = 2 if len(sd) > 2 else len(sd)
+        nrow = math.ceil(len(sd) / ncol)
+        fig, axes = plt.subplots(nrow, ncol, figsize=(6.25, 2.5 * nrow + 0.4), squeeze=False)
+        for ax, dom in zip(axes.flat, sd):
             for a in sorted(sus["arch"].unique()):
                 g = sus[(sus["domain"] == dom) & (sus["arch"] == a)].sort_values("offered_rps")
                 ax.plot(g["offered_rps"], g["p50_ms"], marker="o", color=col[a], label=f"{a} P50")
                 ax.plot(g["offered_rps"], g["p95_ms"], marker="x", ls="--", color=col[a],
                         label=f"{a} P95")
-            ax.set_title(DOMAIN_NAME[dom], fontsize=10)
+            ax.set_title(DOMAIN_NAME[dom])
             ax.set_xlabel("offered rate (req/s, Poisson)")
-        axes[0, 0].set_ylabel("latency (ms)")
-        axes[0, 0].legend(fontsize=7)
-        fig.tight_layout()
-        fig.savefig(os.path.join(fig_dir, "fig_sustained.png"), dpi=200)
+        for r in range(nrow):
+            axes[r, 0].set_ylabel("latency (ms)")
+        h, l = axes[0, 0].get_legend_handles_labels()
+        fig.legend(h, l, loc="lower center", ncol=4, frameon=False)
+        fig.tight_layout(rect=(0, 0.07, 1, 1))
+        fig.savefig(os.path.join(fig_dir, "fig_sustained.png"))
         plt.close(fig)
 
 
